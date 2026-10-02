@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from "react";
 import Plot from "react-plotly.js";
 
-const API = "http://127.0.0.1:8000/api";
+const API = import.meta.env.DEV ? "http://127.0.0.1:8000/api" : "/api";
 
 function money(value) {
   return `₹${Number(value || 0).toLocaleString("en-IN", { maximumFractionDigits: 2 })}`;

@@ -38,6 +38,14 @@ npm run dev
 
 Frontend: `http://localhost:5173`
 
+## Deploy on Vercel
+
+Import this repository into Vercel. The root `vercel.json` configures the
+frontend and backend as separate services: `/api/*` requests are routed to the
+FastAPI backend, and all other paths are routed to the Vite frontend. The
+frontend uses the local backend URL during development and the same-origin
+`/api` path when deployed.
+
 ## Folder structure
 ```text
 Stock_Correlation_Analyzer_NEW
